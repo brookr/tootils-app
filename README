@@ -1,0 +1,7 @@
+This tiny app can be used to help you keep a running score for 
+just how punctual you are.
+
+It works by reading mentions of @punctualize for a number, which 
+is assumed to be a report of minutes late to a meeting. Negative
+numbers are assumed to be minutes early.
+
