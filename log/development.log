@@ -1,0 +1,213 @@
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (110.4ms)[0m   [0mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (512.9ms)[0m   [0;1mCREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`)[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+Migrating to CreateUsers (20090814010023)
+  [4;35;1mSQL (5.4ms)[0m   [0mCREATE TABLE `users` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (3.0ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20090814010023')[0m
+Migrating to CreateScores (20090814010432)
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (11.4ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateUsers (20090814010023)
+Migrating to CreateScores (20090814010432)
+  [4;36;1mSQL (17.1ms)[0m   [0;1mCREATE TABLE `scores` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `user_id` int(11), `points` int(11), `source` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (63.3ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20090814010432')[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (5.6ms)[0m   [0mSHOW FIELDS FROM `scores`[0m
+  [4;36;1mSQL (3.2ms)[0m   [0;1mdescribe `scores`[0m
+  [4;35;1mSQL (2.0ms)[0m   [0mSHOW KEYS FROM `scores`[0m
+  [4;36;1mSQL (5.8ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (2.8ms)[0m   [0mdescribe `users`[0m
+  [4;36;1mSQL (1.8ms)[0m   [0;1mSHOW KEYS FROM `users`[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mStream Columns (0.0ms)[0m   [0;1mMysql::Error: Table 'punctuality_development.streams' doesn't exist: SHOW FIELDS FROM `streams`[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateUsers (20090814010023)
+Migrating to CreateScores (20090814010432)
+Migrating to CreateStreams (20090814052004)
+  [4;36;1mSQL (10.1ms)[0m   [0;1mCREATE TABLE `streams` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (27.6ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20090814052004')[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (3.2ms)[0m   [0mSHOW FIELDS FROM `scores`[0m
+  [4;36;1mSQL (6.5ms)[0m   [0;1mdescribe `scores`[0m
+  [4;35;1mSQL (3.5ms)[0m   [0mSHOW KEYS FROM `scores`[0m
+  [4;36;1mSQL (7.2ms)[0m   [0;1mSHOW FIELDS FROM `streams`[0m
+  [4;35;1mSQL (3.3ms)[0m   [0mdescribe `streams`[0m
+  [4;36;1mSQL (2.2ms)[0m   [0;1mSHOW KEYS FROM `streams`[0m
+  [4;35;1mSQL (3.4ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mSQL (4.5ms)[0m   [0;1mdescribe `users`[0m
+  [4;35;1mSQL (3.2ms)[0m   [0mSHOW KEYS FROM `users`[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mStream Columns (28.7ms)[0m   [0;1mSHOW FIELDS FROM `streams`[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mStream Columns (1.6ms)[0m   [0mSHOW FIELDS FROM `streams`[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (4.0ms)[0m   [0mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (12.1ms)[0m   [0;1mCREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`)[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+Migrating to CreateUsers (20090814010023)
+  [4;35;1mSQL (3.9ms)[0m   [0mCREATE TABLE `users` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (1.8ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20090814010023')[0m
+Migrating to CreateScores (20090814010432)
+  [4;35;1mSQL (5.2ms)[0m   [0mCREATE TABLE `scores` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `user_id` int(11), `points` int(11), `source` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (1.8ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20090814010432')[0m
+Migrating to CreateStreams (20090814052004)
+  [4;35;1mSQL (5.7ms)[0m   [0mCREATE TABLE `streams` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `last_mention` bigint, `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (2.1ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20090814052004')[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (2.0ms)[0m   [0;1mSHOW FIELDS FROM `scores`[0m
+  [4;35;1mSQL (4.9ms)[0m   [0mdescribe `scores`[0m
+  [4;36;1mSQL (2.6ms)[0m   [0;1mSHOW KEYS FROM `scores`[0m
+  [4;35;1mSQL (3.5ms)[0m   [0mSHOW FIELDS FROM `streams`[0m
+  [4;36;1mSQL (5.7ms)[0m   [0;1mdescribe `streams`[0m
+  [4;35;1mSQL (2.2ms)[0m   [0mSHOW KEYS FROM `streams`[0m
+  [4;36;1mSQL (3.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (6.7ms)[0m   [0mdescribe `users`[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW KEYS FROM `users`[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mStream Columns (1.4ms)[0m   [0;1mSHOW FIELDS FROM `streams`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mStream Columns (1.3ms)[0m   [0mSHOW FIELDS FROM `streams`[0m
+  [4;36;1mSQL (1.7ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mStream Create (3.0ms)[0m   [0mINSERT INTO `streams` (`updated_at`, `last_mention`, `created_at`) VALUES('2009-08-14 06:13:14', 3302813245, '2009-08-14 06:13:14')[0m
+  [4;36;1mSQL (0.9ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mStream Columns (1.3ms)[0m   [0mSHOW FIELDS FROM `streams`[0m
+  [4;36;1mStream Columns (2.4ms)[0m   [0;1mSHOW FIELDS FROM `streams`[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mStream Columns (1.6ms)[0m   [0mSHOW FIELDS FROM `streams`[0m
+  [4;36;1mUser Columns (2.6ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+WARNING: Can't mass-assign these protected attributes: id
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` LIMIT 1[0m
+WARNING: Can't mass-assign these protected attributes: id
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Create (0.3ms)[0m   [0mINSERT INTO `users` (`name`, `updated_at`, `created_at`) VALUES('brookr', '2009-08-14 06:35:11', '2009-08-14 06:35:11')[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` LIMIT 1[0m
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM `users` LIMIT 1[0m
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM `users` LIMIT 1[0m
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM `users` LIMIT 1[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (2.6ms)[0m   [0;1mUPDATE `users` SET `updated_at` = '2009-08-14 06:35:59' WHERE `id` = 11136022[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mCOMMIT[0m
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM `users` [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` LIMIT 1[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM `users` LIMIT 1[0m
+  [4;35;1mUser Columns (1.4ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mScore Load (0.3ms)[0m   [0;1mSELECT * FROM `scores` WHERE (`scores`.user_id = 1) [0m
+  [4;35;1mScore Columns (34.3ms)[0m   [0mSHOW FIELDS FROM `scores`[0m
+  [4;36;1mSQL (24.7ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mScore Create (0.3ms)[0m   [0mINSERT INTO `scores` (`updated_at`, `points`, `user_id`, `source`, `created_at`) VALUES('2009-08-14 06:38:08', 5, 1, NULL, '2009-08-14 06:38:08')[0m
+  [4;36;1mSQL (2.2ms)[0m   [0;1mCOMMIT[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mStream Load (0.3ms)[0m   [0;1mSELECT * FROM `streams` LIMIT 1[0m
+  [4;35;1mStream Columns (1.3ms)[0m   [0mSHOW FIELDS FROM `streams`[0m
+  [4;36;1mUser Columns (27.5ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.9ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`name` = 'brookr') LIMIT 1[0m
+  [4;36;1mScore Columns (1.4ms)[0m   [0;1mSHOW FIELDS FROM `scores`[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mBEGIN[0m
+  [4;36;1mScore Create (0.2ms)[0m   [0;1mINSERT INTO `scores` (`updated_at`, `points`, `user_id`, `source`, `created_at`) VALUES('2009-08-14 06:42:20', 28, 1, 'Twitter', '2009-08-14 06:42:20')[0m
+  [4;35;1mSQL (2.7ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mStream Update (0.3ms)[0m   [0mUPDATE `streams` SET `last_mention` = 3303009539, `updated_at` = '2009-08-14 06:42:20' WHERE `id` = 1[0m
+  [4;36;1mSQL (27.8ms)[0m   [0;1mCOMMIT[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM `users` LIMIT 1[0m
+  [4;35;1mUser Columns (1.5ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mScore Load (0.4ms)[0m   [0;1mSELECT * FROM `scores` WHERE (`scores`.user_id = 1) [0m
+  [4;35;1mScore Columns (1.5ms)[0m   [0mSHOW FIELDS FROM `scores`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mScore Create (127.6ms)[0m   [0mINSERT INTO `scores` (`updated_at`, `points`, `user_id`, `source`, `created_at`) VALUES('2009-08-14 06:55:58', -7, 1, 'Twitter', '2009-08-14 06:55:58')[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mScore Create (0.2ms)[0m   [0;1mINSERT INTO `scores` (`updated_at`, `points`, `user_id`, `source`, `created_at`) VALUES('2009-08-14 06:56:06', 10, 1, 'Twitter', '2009-08-14 06:56:06')[0m
+  [4;35;1mSQL (25.4ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mScore Create (0.2ms)[0m   [0mINSERT INTO `scores` (`updated_at`, `points`, `user_id`, `source`, `created_at`) VALUES('2009-08-14 06:56:10', -3, 1, 'Twitter', '2009-08-14 06:56:10')[0m
+  [4;36;1mSQL (0.9ms)[0m   [0;1mCOMMIT[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mStream Load (0.4ms)[0m   [0;1mSELECT * FROM `streams` LIMIT 1[0m
+  [4;35;1mStream Columns (1.3ms)[0m   [0mSHOW FIELDS FROM `streams`[0m
+  [4;36;1mUser Columns (1.4ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (1.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`name` = 'brookr') LIMIT 1[0m
+  [4;36;1mScore Columns (1.4ms)[0m   [0;1mSHOW FIELDS FROM `scores`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mScore Create (0.2ms)[0m   [0;1mINSERT INTO `scores` (`updated_at`, `points`, `user_id`, `source`, `created_at`) VALUES('2009-08-14 06:59:59', 32, 1, 'Twitter', '2009-08-14 06:59:59')[0m
+  [4;35;1mSQL (1.7ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mStream Update (0.2ms)[0m   [0mUPDATE `streams` SET `last_mention` = 3303489518, `updated_at` = '2009-08-14 06:59:59' WHERE `id` = 1[0m
+  [4;36;1mSQL (25.8ms)[0m   [0;1mCOMMIT[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM `users` LIMIT 1[0m
+  [4;35;1mUser Columns (3.3ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mScore Load (0.8ms)[0m   [0;1mSELECT * FROM `scores` LIMIT 1[0m
+  [4;35;1mScore Columns (31.6ms)[0m   [0mSHOW FIELDS FROM `scores`[0m
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mStream Load (0.4ms)[0m   [0;1mSELECT * FROM `streams` LIMIT 1[0m
+  [4;35;1mStream Columns (1.4ms)[0m   [0mSHOW FIELDS FROM `streams`[0m
+  [4;36;1mUser Columns (3.3ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`name` = 'brookr') LIMIT 1[0m
+  [4;36;1mScore Columns (2.8ms)[0m   [0;1mSHOW FIELDS FROM `scores`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mScore Create (0.2ms)[0m   [0;1mINSERT INTO `scores` (`updated_at`, `points`, `user_id`, `source`, `created_at`) VALUES('2009-08-14 07:02:45', 32, 1, 'Twitter', '2009-08-14 07:02:45')[0m
+  [4;35;1mSQL (1.8ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mStream Update (0.2ms)[0m   [0mUPDATE `streams` SET `last_mention` = 3303489518, `updated_at` = '2009-08-14 07:02:45' WHERE `id` = 1[0m
+  [4;36;1mSQL (1.4ms)[0m   [0;1mCOMMIT[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mStream Load (0.3ms)[0m   [0;1mSELECT * FROM `streams` LIMIT 1[0m
+  [4;35;1mStream Columns (56.1ms)[0m   [0mSHOW FIELDS FROM `streams`[0m
+  [4;36;1mUser Columns (2.7ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.9ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`name` = 'brookr') LIMIT 1[0m
+  [4;36;1mScore Columns (3.1ms)[0m   [0;1mSHOW FIELDS FROM `scores`[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mBEGIN[0m
+  [4;36;1mScore Create (0.3ms)[0m   [0;1mINSERT INTO `scores` (`updated_at`, `points`, `user_id`, `source`, `created_at`) VALUES('2009-08-14 07:04:03', 32, 1, 'Twitter', '2009-08-14 07:04:03')[0m
+  [4;35;1mSQL (1.7ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mStream Update (0.4ms)[0m   [0mUPDATE `streams` SET `last_mention` = 3303489518, `updated_at` = '2009-08-14 07:04:03' WHERE `id` = 1[0m
+  [4;36;1mSQL (1.5ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mScore Load (0.2ms)[0m   [0mSELECT * FROM `scores` WHERE (`scores`.user_id = 1) ORDER BY scores.id DESC LIMIT 1[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;35;1mScore Load (0.2ms)[0m   [0mSELECT * FROM `scores` WHERE (`scores`.user_id = 1) LIMIT 1[0m
+  [4;36;1mScore Load (0.2ms)[0m   [0;1mSELECT * FROM `scores` WHERE (`scores`.user_id = 1) [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM `users` LIMIT 1[0m
+  [4;35;1mUser Columns (29.7ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mScore Load (0.3ms)[0m   [0;1mSELECT * FROM `scores` WHERE (`scores`.user_id = 1) [0m
+  [4;35;1mScore Columns (2.6ms)[0m   [0mSHOW FIELDS FROM `scores`[0m
