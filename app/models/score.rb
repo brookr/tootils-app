@@ -10,4 +10,9 @@ class Score < ActiveRecord::Base
       "#{points} minutes late"
     end
   end
+  
+  def average
+    user.scores.map(&:points).sum / user.scores.length if user.scores.first
+  end
+  
 end

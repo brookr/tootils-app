@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20090814052004) do
+ActiveRecord::Schema.define(:version => 20090817071020) do
 
   create_table "scores", :force => true do |t|
     t.integer  "user_id"
@@ -21,6 +21,7 @@ ActiveRecord::Schema.define(:version => 20090814052004) do
   end
 
   create_table "streams", :force => true do |t|
+    t.string   "type"
     t.integer  "last_mention", :limit => 8
     t.datetime "created_at"
     t.datetime "updated_at"

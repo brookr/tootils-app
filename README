@@ -1,7 +1,23 @@
-This tiny app can be used to help you keep a running score for 
+This tiny app allows drop-in Twitter monitors. Just setup a Twitter account, and 
+a RegExp, and code out what you want to do with the data.
+
+Current Modules:
+================
+
+Punctualize!
+
+This numeric tracker can be used to help you keep a running score for 
 just how punctual you are.
 
 It works by reading mentions of @punctualize for a number, which 
 is assumed to be a report of minutes late to a meeting. Negative
 numbers are assumed to be minutes early.
 
+
+Coming Soon:
+============
+
+Twit_Tree!
+
+Just ask @twit_tree how far away another user is from you, and get a reply 
+with the connecting chain, up to three degrees, if a link is found.

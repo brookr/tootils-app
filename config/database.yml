@@ -1,7 +1,7 @@
 development:
   adapter: mysql
   encoding: utf8
-  database: punctuality_development
+  database: tootils_development
   username: root
   password: 
   host: localhost  
@@ -15,7 +15,7 @@ test:
 
 production:
   adapter: mysql
-  host: casehawk.net
-  database: punctuality_production
-  username: admin
-  password: master
+  host: localhost
+  database: tootils_production
+  username: rails
+  password: rails
