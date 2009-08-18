@@ -2,7 +2,7 @@ class ScoresController < ApplicationController
   # GET /scores
   # GET /scores.xml
   def index
-    @scores = score.all
+    @scores = Score.all
 
     respond_to do |format|
       format.html # index.html.erb
@@ -13,7 +13,7 @@ class ScoresController < ApplicationController
   # GET /scores/1
   # GET /scores/1.xml
   def show
-    @score = score.find(params[:id])
+    @score = Score.find(params[:id])
 
     respond_to do |format|
       format.html # show.html.erb
@@ -24,7 +24,7 @@ class ScoresController < ApplicationController
   # GET /scores/new
   # GET /scores/new.xml
   def new
-    @score = score.new
+    @score = Score.new
 
     respond_to do |format|
       format.html # new.html.erb
@@ -34,13 +34,13 @@ class ScoresController < ApplicationController
 
   # GET /scores/1/edit
   def edit
-    @score = score.find(params[:id])
+    @score = Score.find(params[:id])
   end
 
   # POST /scores
   # POST /scores.xml
   def create
-    @score = score.new(params[:score])
+    @score = Score.new(params[:score])
 
     respond_to do |format|
       if @score.save
@@ -57,7 +57,7 @@ class ScoresController < ApplicationController
   # PUT /scores/1
   # PUT /scores/1.xml
   def update
-    @score = score.find(params[:id])
+    @score = Score.find(params[:id])
 
     respond_to do |format|
       if @score.update_attributes(params[:score])
@@ -74,7 +74,7 @@ class ScoresController < ApplicationController
   # DELETE /scores/1
   # DELETE /scores/1.xml
   def destroy
-    @score = score.find(params[:id])
+    @score = Score.find(params[:id])
     @score.destroy
 
     respond_to do |format|

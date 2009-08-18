@@ -1,2 +1,0 @@
-class StreamsController < ApplicationController
-end

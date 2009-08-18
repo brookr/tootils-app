@@ -1,5 +1,5 @@
 ActionController::Routing::Routes.draw do |map|
-  map.resources :streams
+  map.resources :punctualize
 
   map.resources :scores
 
