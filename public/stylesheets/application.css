@@ -1,0 +1,1465 @@
+/*
+  Colors
+  Red #FF3932
+  Light Blue #BEDEEF
+  Dark Blue #5793F5
+  Darker Blue #3C459F
+  Green #7CEB64
+ */
+  
+/****************************************************************
+  STRUCTURE
+/***************************************************************/
+* {
+}
+body {
+  color: #333;
+  font-size: 62.5%;
+  line-height: 1.5em; 
+  font-family: "Helvetica Neue", Helvetica, "Bitstream Vera Sans", Arial, sans-serif; 
+  background: #FFF;
+  margin: 0;
+  padding: 0;
+}
+body, div, td, table, p, textarea { }
+
+h1, h2, h3, h4, h5 {
+  margin: 0.25em 0 0.5em;
+  color: #555; 
+  font-weight: normal; 
+  line-height: 1.2em;  
+}
+  h1 { font-size: 2.4em; }
+  h2 { font-size: 2em; }
+  h3 { font-size: 1.6em; }
+a { color: #FF3932; }
+a:hover { color: #3C459F; text-decoration: underline; }
+
+ul, ol, p { margin: 0 0 1em; }
+
+#header {
+  margin: 0 auto; 
+  padding: 0; 
+  width: auto; 
+  height: 90px; 
+  background: #CCC url(../images/header-bg.png) repeat-x left top; 
+  border-bottom: 1px solid #BBB;
+}
+  #header-inner { margin: 0 auto; width: 790px; padding: 0 0 0 160px; }
+  #header h1 { 
+    font-family: Palatino, Georgia, "New Century Schoolbook", "Bitstream Vera Serif", Utopia, "Times New Roman", times, serif; 
+    margin: 0 auto; 
+    padding-top: 35px; 
+    line-height: 50px; 
+    font-size: 2.8em;
+    text-align: center;
+    text-shadow: 0 0 4px #FFF, 0 2px 6px #F3F3F3, 0 -2px 6px #F3F3F3;
+  }
+    #header h1 span { color: #FF3932; }
+
+.logbox {
+  position: fixed; 
+  top: 0; 
+  left: auto; 
+  width: 790px; 
+  height: 25px; 
+  margin: 0 auto; 
+  padding: 0; 
+  list-style: none; 
+  background: #F3F3F3;
+  border-color: #AAA; 
+  border-style: solid; 
+  border-width: 0 1px 1px; 
+  z-index: 5000; 
+
+  -webkit-box-shadow: 0 0 4px #999; 
+  -moz-box-shadow: 0 0 4px #999; 
+  box-shadow: 0 0 4px #999; 
+}
+  .logbox li {
+    float: left; 
+    height: 25px; 
+    line-height: 25px; 
+  }
+    .logbox li a, .logbox li span {
+      font-size: 1.2em; 
+      display: block;
+      padding: 0 1em; 
+      height: 25px; 
+      line-height: 25px; 
+      text-decoration: none;
+      overflow: hidden;
+      background: #FFF url(../images/nav-button-bg.png) repeat-x left -5px; 
+      border-right: 1px solid #CCC; 
+      border-left: 1px solid #FFF;
+      color: #333;  
+    }
+      .logbox li a strong {
+        color: #FF3932;
+      }
+  
+  .logbox .quarter {
+    position: relative; 
+    height: auto; 
+  }
+  .logbox .quarter ul {
+    display: none; 
+    position: absolute; 
+    width: 99%; 
+    top: 25px; 
+    left: -1px; 
+    list-style: none; 
+    margin: 0; 
+    padding: 0; 
+    border: 0px none; 
+    border-right: 1px solid #CCCCCC; 
+    border-left: 1px solid #CCCCCC; 
+    border-top: 1px solid #E3E3E3;
+  }
+    .logbox .quarter:hover ul {
+      display: block; 
+    }
+    .logbox .quarter ul li {
+      float: none; 
+      text-align: center; 
+      border: 0px none; 
+      border-bottom: 1px solid #E3E3E3;
+      border-top: 1px solid #FFFFFF;
+    }
+      .logbox .quarter ul li a {
+        color: #FF3932; 
+        background: #FFFFFF;
+        border: 0px none; 
+        font-weight: bold; 
+      }
+        .logbox .quarter ul li.active a, 
+        .logbox .quarter ul li.active a:hover 
+        {
+          font-weight: normal; 
+          color: #999999; 
+          background: #FFFFFF;
+        }
+        .logbox .quarter ul li a:hover {
+          background: #EEEEEE; 
+        }
+  
+  .logbox li.logout {
+    float: right; 
+  }
+    .logbox li.logout a {
+      padding: 0 1.5em; 
+      letter-spacing: 1px; 
+      text-align: center; 
+      text-transform: uppercase; 
+      font-weight: bold; 
+      border-right: 1px solid #FFF; 
+      border-left: 1px solid #CCC; 
+      color: #FF3932;
+    }
+    .logbox li.logout a:hover {
+      background: #FFF url(../images/nav-button-bg.png) repeat-x left center; 
+      color: #3C459F;
+    }
+    .logbox li span {
+    }
+    .logbox li a:hover {
+      background: #FFF; 
+    }
+    .logbox li a:hover strong { 
+      text-decoration: none; 
+      color: #3C459F;
+    }
+
+#wrapper, #footer {
+  width: 950px; 
+}  
+#wrapper {
+  margin: 0 auto; 
+  padding: 0; 
+  text-align: left; 
+}
+#footer {
+  margin: 20px auto 0; 
+  padding: 10px 0; 
+  text-align: center; 
+  border-top: 1px solid #CCC; 
+  
+  color: #999; 
+  font-size: 1.1em; 
+}
+
+#sidebar {
+  margin: 0; 
+  padding: 0; 
+  float: left; 
+  width: 160px;
+}
+
+.block {
+  margin: 1em 0 2em; 
+  padding: 0;
+
+  -webkit-box-shadow: 0 0 4px #CCC; 
+  -moz-box-shadow: 0 0 4px #CCC;
+  box-shadow: 0 0 4px #CCC;
+}
+
+  .block.menu {
+  }
+
+  .block h2 {
+    text-align: center; 
+    border-bottom: 1px dashed #999; 
+    padding-bottom: 0.25em; 
+    font-size: 1.3em; 
+    text-transform: uppercase; 
+    margin-bottom: 0; 
+  }
+  
+  .block.menu ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    list-style-type: none; 
+    border-bottom: 1px solid #CCC; 
+    border-left: 1px solid #CCC; 
+  }
+  .block.menu ul li{
+    margin: 0;
+    list-style-type: none;    
+    border-top: 1px solid #CCC; 
+  }
+    .block.menu ul li a, .block.menu ul li span {
+      font-size: 1.2em; 
+      display: block;
+      padding: 0 0 0 0.5em; 
+      height: 30px; 
+      line-height: 30px; 
+      text-decoration: none;
+      background: #FFF url(../images/nav-button-bg.png) repeat-x left top; 
+      overflow: hidden;
+    }
+      .block.menu ul li span {
+        background: #FFF url(../images/nav-button-bg.png) repeat-x left bottom; 
+      }
+      .block.menu ul li a:hover { 
+        text-decoration: none; 
+        background: #FFF url(../images/nav-button-bg.png) repeat-x left center; 
+      }
+  .block.menu ul li div#menu_raquo {
+    display: inline;
+    font-size: 15px;
+    color: #CCC;
+  }
+  
+#content {
+  float: left; 
+  margin: 0; 
+  width: 775px; 
+  border-left: 1px solid #BBB; 
+  padding: 10px 0 40px 10px; 
+
+  font-size: 1.2em; 
+  line-height: 1.5em; 
+
+  background: #FFF;
+}
+
+  .output h1, 
+  .output h2 {
+    color: #5793F5;
+    border-bottom: 1px dashed #CCC;
+    padding-bottom: 0.25em;
+  }
+  
+  .output table { 
+    width: 100%; 
+    border-spacing: 0; 
+    border-collapse: collapse; 
+  }
+  
+  .resource_list, 
+  .survey_list, .code_list {
+    border-style: solid; 
+    border-width: 1px;
+    border-color: #E3E3E3 #D3D3D3 #D3D3D3 #DDDDDD;
+    margin-bottom: 1em; 
+    box-shadow: 0 1px 4px #CCCCCC;
+    -moz-box-shadow: 0 1px 4px #CCCCCC;
+    -webkit-box-shadow: 0 1px 4px #CCCCCC;
+  }
+    .resource_list th, .resource_list td, 
+    .survey_list th, .survey_list td, .code_list th, .code_list td {
+      padding: 6px; 
+      
+    }
+    .resource_list th, 
+    .survey_list th, .code_list th {
+      border-bottom: 1px solid #BBBBBB; 
+      background: #E3E3E3;
+      text-transform: uppercase; 
+      font-weight: bold; 
+      color: #888888;
+      font-size: 0.9em; 
+      text-align: center;
+    }
+      .resource_list tr:hover th, 
+      .survey_list tr:hover th,
+      .code_list tr:hover th {
+        color: #555555;
+      }
+    .resource_list td, 
+    .survey_list td, .code_list td {
+      border-bottom: 1px solid #CCCCCC;
+      background: #EEEEEE;
+    }
+    .resource_list tr.even td, 
+    .survey_list tr.even td, .code_list tr.even td {
+      background: #FFFFFF;
+    }
+  
+    .survey_list th.survey_moment {
+      background: #FFFFFF; 
+      border-right: 1px solid #E3E3E3;
+      border-bottom: 1px solid #CCCCCC;
+      color: #555555;
+      text-align: left;
+      font-size: 1em;
+    }
+    .survey_list tr:hover th.survey_moment {
+      color: #4A6A8F;
+      border-right: 1px solid #CCCCCC;
+    }
+    
+    .survey_list td.survey_completed {
+      text-align: center; 
+    }
+      .survey_list td.survey_completed img {
+        margin: 0 auto; 
+        padding: 4px; 
+      }
+        .survey_list td.survey_completed img:hover {
+          background: #FFFFFF; 
+          border: 1px solid #CCCCCC;
+        }
+  
+    .survey_list td.survey_actions ul {
+      list-style: none; 
+    }
+      .survey_list td.survey_actions li {
+        margin: 0; 
+        padding: 0; 
+        text-align: center; 
+      }
+      .survey_list td.survey_actions li a {
+        display: block; 
+        padding: 4px;
+        border-width: 1px 1px 0 1px;
+        border-style: solid;
+        border-color: #DDDDDD #D3D3D3 #D3D3D3 #DDDDDD;        
+        background: #FFFFFF; 
+        text-decoration: none;
+        white-space: nowrap;
+      }
+        .survey_list td.survey_actions li:last-child a {
+          border-width: 1px; 
+        }
+        .survey_list td.survey_actions li a:hover {
+          background: #F6F6F6;
+          border-color: #CCCCCC; 
+        }
+     
+    .survey_list tr:hover td {
+      background: #C5E5EF;
+      border-color: #AECEDF;
+    }
+        
+    .survey_list .surveys-reviewed ul.review_list {
+      border: 0px none; 
+      margin: 0.25em 0; 
+      padding: 0;
+    }
+      .survey_list .surveys-reviewed ul.review_list li {
+        border: 0px none; 
+        border-bottom: 1px solid #D3D3D3;
+        padding: 0.25em 0.5em; 
+        margin: 0; 
+      }
+        .survey_list .surveys-reviewed ul.review_list li:last-child {
+          border-bottom: 0px none;
+        }
+  
+  .code_list {
+    border-bottom: 1px solid #CCC;
+  }
+    .code_list th, .code_list td {
+      padding: 0.5em; 
+
+    }
+    .code_list th {
+      border-bottom: 1px solid #999; 
+      background: #DDD;
+      text-transform: uppercase; 
+      font-weight: bold; 
+      color: #666;
+    }
+    .code_list td {
+      border-bottom: 1px solid #DDDDDD;
+      background: #EEE;
+    }
+    .code_list tr.even td {
+      background: #FFF;
+    }
+
+  .survey_list ul {
+    margin: 0; 
+    padding: 0; 
+    line-height: 1.25em; 
+  }
+    .survey_list ul li { margin-bottom: 0.25em; }
+
+/****************************************************************
+  GENERAL POSITIONING
+/***************************************************************/
+.left {
+  float: left;
+}
+.right {
+  float: right;
+}
+.clear {
+  clear: both;
+}
+.hide {
+  display: none;
+}
+.show {
+  display: block;
+}
+.center {
+  text-align: center;
+}
+/****************************************************************
+  FLASH OUTPUT
+/***************************************************************/
+#flashcontainer{
+  margin: 0 0 1em; 
+  padding: 1em;
+  border-width: 4px; 
+  border-color: #FFF633;
+  border-style: solid;
+  font-size: 1.1em;
+  line-height: 1.1em;
+  color: #333;
+  
+  box-shadow: 0 0 4px #CCC; 
+  border-radius: 8px; 
+  
+  -moz-box-shadow: 0 0 4px #CCC; 
+  -webkit-box-shadow: 0 0 4px #CCC; 
+  -moz-border-radius: 8px; 
+  -webkit-border-radius: 8px; 
+}
+  #flashcontainer p {
+    margin: 0.25em 0 0;
+    padding-bottom: 0.25em;
+  }
+.flash, .flashnotice, .flasherror, .flashsuccess, .flashdebug {
+  padding-left: 30px;
+  background-repeat: no-repeat;
+  background-position: 5px top;
+}
+.flash {
+
+}
+.flashnotice {
+  background-image: url('../images/icons/information.png');
+}
+.flasherror {
+  background-image: url('../images/icons/exclamation.png');
+  color: #CF0902;
+}
+.flashsuccess {
+  background-image: url('../images/success.png');
+  color: #7CEB64;
+}
+.flashdebug {
+  color: #4CBB34;
+}
+
+/****************************************************************
+  SURVEY DISPLAY
+/***************************************************************/
+#survey_page {
+  
+}  
+  #survey_title_bar {
+    margin: 0 auto; padding: 1em 0; 
+  }
+
+    #survey_title_bar p { 
+    }
+    #survey_title_bar p.welcome {
+      margin: 0.5em; 
+      padding: 1em; 
+      background: #EEE; 
+      color: #666; 
+      font-style: italic; 
+      font-size: 1.6em; 
+      line-height: 1.2em; 
+      font-family: Palatino, Georgia, "New Century Schoolbook", "Bitstream Vera Serif", Utopia, "Times New Roman", times, serif;   
+    }
+    
+    .survey_title_section {
+      float: left; 
+      margin: 0 1em 0 0;
+      padding: 0.5em 0 0.5em 1em;
+    }
+      div.survey_title_section {
+        width: 32%; 
+        border-left: 1px solid #EEE;
+      }
+
+.survey_moment {
+  font-weight: bold; 
+  color: #FF3932; 
+}
+
+.survey_moment span{
+  white-space:nowrap;
+}
+
+#survey_page h2 {
+  color: #FF3932; 
+  border-bottom: 1px dashed #999; 
+  padding-bottom: 0.25em; 
+  clear: both; 
+  margin-top: 0.25em; 
+}
+#survey_page ul{
+  list-style-type: none;
+  margin: 0; padding: 0;
+  line-height: 1.2em;  
+}
+  #survey_page ul li {
+    padding: 0;
+    margin: 0; 
+    border-top: 1px solid #EEE; 
+    position: relative;
+    width: 475px;
+  }
+    #survey_page ul li.hide { border-bottom: none; padding: 0; }
+    #survey_page ul li.survey_subcode { 
+      margin: 0 0 0 15px; 
+      width: 460px; 
+    }
+      #survey_page ul li.survey_subcode label {
+        color: #FF3932; 
+      }
+    
+    #survey_page ul li.subcode_instruction {
+      padding: 0.5em 0;
+    }
+    
+    #survey_page ul li.location {
+      margin-left: 30px;
+      width: 445px; 
+    }
+    
+    #survey_page ul li input { 
+      margin: 0.5em 1em 0.5em 0; 
+    }
+    #survey_page ul li label { 
+    }
+    
+    #survey_page ul li .survey_activity_input {
+      clear: both;
+      padding: 0.125em 0.25em;
+    }
+    
+    #survey_page ul li .survey_desc {
+      position: absolute; 
+      width: 275px;
+      top: -1px;
+      left: 100%;
+      right: 0;
+      padding: 0.5em 10px 1em 15px; 
+      border-style: solid;
+      border-color: #EEE #D6D6D6 #D6D6D6;
+      border-width: 1px 1px 1px 0;
+      background: #F3F3F3 url(../images/survey_desc-bg-2.png) repeat-x left bottom;
+      color: #5793F5;
+      line-height: 1.4em;
+    }
+
+    #survey_page ul li .location_desc {
+      position: absolute; 
+      width: 300px;
+      top: 0;
+      left: 100%;
+      right: 0;
+      padding: 0.5em 10px 1em 15px; 
+      border-style: solid;
+      border-color: #EEE #CCC #CCC;
+      border-width: 1px 1px 2px 0;
+      background: #F3F3F3;
+      color: #5793F5;
+      line-height: 1.4em;
+    }
+    
+.code_num { font-weight: bold; }
+
+#survey_form {
+}
+#survey_activities {
+  float: left;  
+  margin: 0;
+  width: 100%;
+}
+#survey_activities ul {
+  padding-left: 0;
+}
+#survey_description {
+  float: left;
+  width: 235px;
+  border-left: 1px dashed #CCC; 
+  padding: 1em 0 1em 10px; 
+  margin: 200px 0 0; 
+  color: #5793F5; 
+}
+#form_submit, #spmp_response, #non_spmp_response {
+  padding-top: 1em; 
+  clear: both; 
+}
+#spmp_response, #non_spmp_response { 
+  float: left; 
+  width: 100%; 
+}
+#spmp_response, #non_spmp_response { float: left; }
+.survey_textarea {
+  float: left;
+  width: 375px; 
+}
+.survey_textarea textarea {
+  margin: 5px;
+  padding: 2px; 
+  font-family: "Helvetica Neue", Helvetica, "Bitstream Vera Sans", Arial, sans-serif; 
+  font-size: 1em; 
+  width: 95%; 
+  background: #FFF url('../images/textarea-desc-bg.png') no-repeat center center; 
+  border: 1px inset #CCC;
+  border-style: 
+}
+.survey_textarea textarea:focus { 
+  background: #FFF; 
+}
+.response_text {
+  height: 200px;
+  clear: both;
+  float: left;
+}
+.central_coded .response_text {
+  height: 100px;
+}
+.survey_instructions {
+  float: right;
+  clear:right;
+  width: 325px;
+  border-left: 1px dashed #CCC; 
+  padding: 0 0 1em 10px; 
+}
+  .survey_instructions h3 { margin: 0.25em 0; }
+  .survey_instructions p {}
+  #survey_page .survey_instructions li {
+    margin: 0 0 0 0.5em; 
+    padding: 0.5em 0; 
+  }
+.example_text {
+  padding: 0.5em; 
+  border: 1px solid #999; 
+  color: #FF3932; 
+}
+.survey_subcodes {
+  margin-left: 15px;
+}
+.shiny_submit { 
+  display: block; 
+  line-height: 80px; 
+  text-decoration: none; 
+}
+#survey_submit, .shiny_submit {
+  font-family: Palatino, Georgia, "New Century Schoolbook", "Bitstream Vera Serif", Utopia, "Times New Roman", times, serif; 
+  color: #FF3932; 
+  border: 0 none; 
+  background: url('../images/submit-bg.jpg') no-repeat center center; 
+  font-weight: normal; 
+  font-size: 1.8em; 
+  text-align: center;
+  height: 80px; width: 300px; 
+  padding: 0; 
+  margin: 0; 
+  cursor: pointer; 
+}
+#survey_submit:hover, .shiny_submit:hover {
+  background: url('../images/submit-bg-hover.jpg') no-repeat center center; 
+  color: #FF3932;  
+  text-decoration: none; 
+}
+
+
+.submit_instructions {
+  margin: 1em 0;
+  padding: 1em; 
+  border-top: 1px dashed #CCC;
+  clear: both;
+  
+  color: #666;
+  font-size: 0.9em; 
+}
+
+  .submit_instructions ol {
+    list-style-type: decimal; 
+    list-style-position: inside; 
+    list-style-image: none; 
+    padding: 0 0 0 1em; 
+    color: #444; 
+  }
+    .submit_instructions li {
+      margin: 0 0 0.25em; 
+    }
+
+/** Response rate, survey completion delay, & quiz score color alert system **/
+.nothing_complete {
+  color: #cf0902; 
+  text-transform: uppercase;
+  font-weight: bold; 
+}
+.really_bad_rate {
+  color: #ff3932;
+  text-transform: uppercase;
+  font-weight: bold; 
+}
+.bad_rate {
+  color: #ff9933;
+}
+.good_rate {
+  color: #fff633;
+}
+.great_rate {
+  color: #4cbb34;
+}
+
+.past_due {
+  color: red;
+}
+
+.reminded {
+  color: purple;
+  font-variant: small-caps;
+}
+
+.late {
+  color: orange;
+}
+
+.today {
+  color: green;
+}
+
+.passed {
+  color: green;
+}
+
+.failed {
+  color: red;
+}
+
+.copyright { color: #5793F5; }
+
+/****************************************************************
+  WEEKLY REPORTS
+/***************************************************************/
+
+.wr_staff_info, .wr_comp_rate, .wr_tables {
+  margin: 0 0 1em;
+  clear: both;
+}
+.wr_staff_info {
+  border-bottom: 1px dashed #999999;
+}
+.wr_staff_info p {
+  padding: 0 1em;
+  font-size: 1.2em;
+  margin: 0 0 0.5em;
+  color: #444;
+}
+.wr_comp_rate h2, .wr_comp_rate h3,
+.wr_tables h3 {
+}
+.wr_comp_rate h2, .wr_comp_rate h3 {
+  margin: 0 0 0.25em;
+  padding: 0;
+  border-bottom: 0px none;
+}
+.wr_comp_rate h3 {
+  text-transform: uppercase;
+  font-size: 1.3em; 
+  color: #999;
+}
+.wr_comp_rate h2 {
+  font-size: 1.8em; 
+  margin-bottom: 0.5em;
+}
+
+.wr_comp_rate .date, .wr_comp_rate .rate, .wr_tables .total, 
+.wr_staff_info .name, .wr_sub_table .wr_incomplete { 
+  color: #FF3932;
+}
+
+.wr_sub_table .wr_complete, .wr_tables .wr_complete {
+  color: #7CEB64;
+}
+
+.wr_tables {
+  width: 100%;
+}
+.wr_tables h3 {
+}
+.wr_table_left {
+}
+.wr_table_right {
+}
+
+.wr_tables table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+.wr_tables th {
+  font-size: 1.4em;
+  color: #666; 
+  font-weight: normal;
+}
+.wr_tables th, .wr_tables td {
+  padding: 0 0 0.5em 0;
+  vertical-align: top;
+}
+.wr_tables th.wr_table_left, .wr_tables td.wr_table_left {
+  padding-right: 1em;
+}
+
+.wr_tables tr {}
+.wr_sub_table td, .wr_sub_table th {
+  border-width: 0 0 1px 0; 
+  border-style: solid;
+  padding: 0.25em 0.5em; 
+}
+.wr_sub_table th {
+  border-color: #999;
+  background: #DDD;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #666;
+  font-size: 1em;
+}
+.wr_sub_table td {
+  border-color: #DDD;
+  background: #EEE;
+}
+.wr_sub_table .even td {
+  background: #FFF;
+}
+
+/****************************************************************
+  Training Presentations
+/***************************************************************/
+.slides {
+  width: 830px;
+  height: 700px;
+}
+
+/****************************************************************
+  GENERAL FORMS
+/***************************************************************/
+.multi-select {
+  height: 300px;
+}
+
+/****************************************************************
+  FORM ERROR HANDLING
+/***************************************************************/
+.fieldWithErrors {
+  display: inline;
+}
+#errorExplanation {
+  border: 5px solid #FF3932;
+  padding: 1em;
+  margin-bottom: 0.5em;
+  background-color: #FFA9A6;
+  color: #333; 
+  font-size: 1.2em; 
+}
+#errorExplanation h2 {
+  text-align: left;
+  font-weight: bold;
+  padding: 0 0 0.5em;
+  border-bottom: 1px dashed #FF3932; 
+  margin-bottom: 0.25em; 
+  font-size: 1.6em; 
+  color: #FF3932;
+}
+#errorExplanation p {
+  color: #333;
+  margin: 0 0 1em; 
+  padding: 0 1em; 
+}
+#errorExplanation ul li {
+  list-style: square;
+  margin: 0 0 0 2em;
+  border: none;
+}
+
+/****************************************************************
+  QUIZZES 'N APPLICATIONS 'N SCHTUFF
+/***************************************************************/
+
+p.instructions {
+  margin: 0 0.5em 1em; 
+  padding: 1em; 
+  background: #EEE; 
+  font-weight: bold; 
+}
+
+.quiz-text {
+  margin: 0 0 1em; 
+  border-top: 1px dashed #999; 
+  padding: 1em 0 1em 40px; 
+}
+  .question-text {
+    font-weight: bold; 
+    padding: 0.5em 0; 
+    border-bottom: 1px dotted #CCC; 
+    margin-right: 40px;
+    margin-bottom: 1em;  
+  }
+  .question-answers {
+    font-weight: normal; 
+    list-style: none; 
+    margin: 0.5em 0; 
+    padding: 0 0 0 20px;
+  }
+    .question-answers li {
+      margin-bottom: 0.25em; 
+    }
+    
+.quiz-scores li, .quiz-scores .question-text {
+  font-weight: normal; 
+}
+
+#content .quiz-score, 
+.quiz-score {
+  color: #999; 
+}
+  #content .quiz-score span, 
+  .quiz-score span {
+    color: #5793F5; 
+  }
+  
+  .quiz-scores .answer-explanation,   
+  .quiz-scores .answer-text {
+    margin: 0.5em 0 0 1em; 
+    padding: 0.5em 1em; 
+    border-bottom: 1px dashed #4CBB34; 
+  }
+  .quiz-scores .answer-text.answer-incorrect { border-bottom: 1px dashed #FF3932; }
+
+    .quiz-scores .answer-text span {
+      font-weight: bold; 
+    }
+    .quiz-scores .answer-text .answer-incorrect { color: #FF3932; text-transform: uppercase; }
+    .quiz-scores .answer-text .answer-correct { color: #4CBB34; text-transform: uppercase; }
+
+  .quiz-scores .answer-explanation { 
+    margin: 0 0 0.5em 1em;  
+    border-bottom: 0px none; 
+    font-weight: bold; 
+    color: #333; 
+  }
+    
+  .quiz-scores .answer-result {
+    color: #FFF; 
+    background: #FF3932;
+    font-weight: bold; 
+    text-transform: uppercase; 
+    padding: 0.25em 0.5em; 
+    margin: 0 0.5em 0 0;
+  }
+    .answer-result.answer-incorrect { }
+    .answer-result.answer-correct { background: #4CBB34; }
+    
+/*** SURVEY REVIEW ***/
+
+/*** This is our "pretty box" model ***/
+.smooth-box {
+  border-width: 1px; 
+  border-style: solid;
+  border-color: #EEE #E3E3E3 #E3E3E3 #EEE;
+  background: #FFF; 
+ 
+  border-radius: 8px; 
+  -moz-border-radius: 8px; 
+  -webkit-border-radius: 8px; 
+  
+  margin: 0 auto 0.5em; 
+  padding: 0;   
+}
+
+.survey-staff .progress-box {
+  font-size: 1.8em; 
+  margin: 0.5em; 
+  height: 1em;
+  display: block; 
+  float: right; 
+  width: 50%; 
+  border-width: 1px;  
+  border-style: solid;
+  border-color: #D3D3D3 #C3C3C3 #C3C3C3 #D3D3D3; 
+  background: #FFF; 
+  overflow: hidden;
+  -webkit-box-shadow: 0 1px 3px #DDD; 
+  -moz-box-shadow: 0 1px 3px #DDD; 
+  box-shadow: 0 1px 3px #DDD;   
+}
+  .progress-box .progress {
+    border: 0px none;
+    display: block; 
+    background: #FFDCDC; 
+    width: 0; 
+    margin: 0; 
+    height: 1em;
+  }
+  .progress-box .progress.good-progress {
+    background: #DCFFB4;
+  }
+.survey-staff h1 {
+  font-size: 1.8em; 
+  border-bottom: 0px none; 
+  margin: 0; 
+  padding: 0.5em 0.5em 0.5em 24px; 
+  cursor: pointer;
+  border-radius: 8px; 
+  -moz-border-radius: 8px; 
+  -webkit-border-radius: 8px; 
+  
+  background: transparent url(../images/icons/group.png) no-repeat 4px center;
+}
+.survey-staff h1:hover {
+  background: #F3F3F3 url(../images/icons/group_go.png) no-repeat 4px center; 
+}
+  .survey-staff .count {
+    padding: 0 0.25em;
+    background: #F3F3F3;
+    font-weight: bold; 
+    color: #999;
+  }
+    .survey-staff .count .count-active {
+    }
+  
+  .staff-list {
+    border-top: 1px solid #E3E3E3; 
+    padding: 0; 
+    margin: 0 0 1em;
+    list-style: none;
+    
+  }
+    .staff-list li {
+      border-top: 1px solid #FFF; 
+      border-bottom: 1px solid #E3E3E3; 
+      padding: 0; 
+      font-size: 1.1em;
+      line-height: 2em; 
+    }
+    .staff-list li.cu_name {
+      text-align: left; 
+      text-transform: uppercase; 
+      font-weight: bold; 
+      font-size: 0.9em; 
+      background: #F3F3F3;
+      color: #666666; 
+      border-bottom: 1px solid #D3D3D3; 
+    }
+      .staff-list li.cu_name a {
+        color: #666666;
+        padding: 0.25em 0 0.25em 1em; 
+      }
+      .staff-list li.cu_name span {
+        display: none; 
+        color: #FF3932;
+        padding-left: 0.5em;
+      }
+        .staff-list li.cu_name a:hover {
+          color: #444444;
+        }
+        .staff-list li.cu_name a:hover span {
+          display: inline;
+        }
+    .staff-list li.staff:hover {
+      border-bottom: 1px solid #D3D3D3; 
+    }
+      .staff-list li a {
+        display: block; 
+        padding: 0 0 0 1em;
+        text-decoration: none; 
+        color: #666;
+      }
+      .staff-list li a:hover {
+        color: #5793F5;
+        background: #F3F3F3;
+      }
+      .staff-list li .surveys {
+        width: 4em; 
+        padding: 0 1.5em; 
+        display: block; 
+        float: right; 
+        border-left: 1px solid #F3F3F3; 
+        background: #FFF; 
+        font-weight: bold; 
+        color: #FF3932;
+        text-align: center;
+      }
+      
+/* Filter links for survey review */
+
+ul.survey_filters {
+  list-style: none;
+  float: left; 
+  margin: 0 auto 0.5em; 
+  padding: 0;
+}
+  .survey_filters li {
+    display: block; 
+    float: left; 
+    padding: 0 0.5em; 
+    border-left: 1px solid #E3E3E3; 
+    position: relative;
+  }
+    .survey_filters li:first-child {
+      border-left: 0px none;
+    }
+    .survey_filters li span {
+      color: #FF3932; 
+    }
+    .survey_filters li:hover span {
+      color: #3C459F;
+    }
+    
+    .survey_filters li ul.codes {
+      position: absolute; 
+      z-index: 99;
+      width: 180px; 
+      top: 100%; 
+      left: 0; 
+      margin: 0; 
+      padding: 0; 
+      display: none; 
+      border-width: 1px; 
+      border-style: solid; 
+      border-color: #EEEEEE #D3D3D3 #D3D3D3 #DDDDDD;    
+      background: #E3E3E3;
+    }
+    .survey_filters li:hover ul.codes {
+      display: block; 
+    }
+      .survey_filters li .codes li {
+        padding: 0; 
+        margin: 0; 
+        display: block; 
+        float: left;
+        width: 36px; 
+        border: 0px none;
+        height: auto; 
+        border-radius: 0; 
+        -moz-border-radius: 0; 
+        -webkit-border-radius: 0; 
+      }
+      
+  .survey_filters a {
+    text-decoration: none; 
+  }
+
+/* Actual review interfaces for individual surveys */
+
+.survey-review {
+  list-style: none; 
+  margin: 1em 0;
+  padding: 0;  
+}
+  .survey-review h1, 
+  .survey-review h2, 
+  .survey-review h3, 
+  .survey-review h4 {
+    margin-top: 0; 
+    padding-top: 0.5em;
+  }
+  .survey-review p {
+    margin: 0.5em 200px 0.5em 0; 
+  }
+    .survey-review li.survey {
+      background: #F3F3F3; 
+      clear: both; 
+    }
+    .survey-review h2 {
+      margin: 0; 
+      padding: 0.25em 1em 0.5em; 
+      border-bottom: 1px solid #E3E3E3; 
+      color: #666; 
+      text-transform: uppercase;
+      font-weight: bold; 
+      font-size: 1.3em;
+    }
+    .survey-code, .survey-submit {
+      padding: 0.5em 200px 0.5em 1em;
+      border-top: 1px solid #FFF; 
+      border-bottom: 1px solid #E3E3E3;
+    }
+    .survey-submit {
+      border-bottom: 0px none;
+    }
+    .survey-code p.qa, 
+    .survey-code p.desc {
+      margin: 0;
+      padding: 0.5em 1em; 
+      border-width: 1px;
+      border-style: solid;
+      border-color: #EEE #E3E3E3 #E3E3E3 #EEE;
+      background: #FFF; 
+    }
+    .survey-code p.qa {
+      border-width: 1px 1px 0;
+      font-size: 1.4em;
+      line-height: 1.25em;
+    }
+    
+    /* Style for comments from previous reviews */
+    
+ul.comments {
+  list-style: none; 
+  padding: 0; 
+  margin: 0 0 1.5em; 
+  border-top: 1px solid #E3E3E3; 
+}
+  .comments li {
+    margin: 0; 
+    padding: 0.5em 0 0.5em 1em; 
+    border-top: 1px solid #FFF; 
+    border-bottom: 1px solid #E3E3E3; 
+    
+  }
+  .comments h3 {
+    margin: 0; 
+    font-size: 1.2em; 
+    line-height: 1em;
+    color: #666;  
+  } 
+    .comments .code {
+      font-weight: bold;
+      text-transform: uppercase; 
+      padding: 0.25em 0.5em; 
+      color: #5793F5;
+    }
+      .comments .code.accept {
+        color: #7CEB64;
+      }
+      .comments .code.revise {
+        color: #FFC933;
+      }
+    .comments .revision-date {
+      text-transform: uppercase; 
+      font-weight: bold; 
+      color: #999;
+      margin: 0 0.5em 0 0;
+    }
+  .comments p {
+    padding: 0.5em 1em; 
+    background: #FFF;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #EEE #E3E3E3 #E3E3E3 #EEE; 
+    font-size: 1.4em; 
+  }
+    .comments p.no-comment {
+      font-size: 1em;
+      color: #666;
+    }
+    /* Now we move into styles for the controls on the right */
+    
+    .survey-review .control {
+      position: relative;
+      text-align: center;
+      float: right; 
+      margin: 0; 
+      width: 180px; 
+      padding: 0; 
+      border-color: #CCC; 
+      border-style: solid; 
+      border-width: 0 0 1px 1px; 
+      background: #FFF; 
+      -webkit-box-shadow: 0 1px 3px #DDD; 
+      -moz-box-shadow: 0 1px 3px #DDD; 
+      box-shadow: 0 1px 3px #DDD;        
+    }
+    .control.code {
+      overflow: visible;
+    }
+    .control.submit {
+      overflow: hidden;    
+      border-bottom-left-radius: 8px; 
+      -moz-border-radius-bottomleft: 8px;
+      -webkit-border-bottom-left-radius: 8px;
+      clear: right;
+    }
+    .survey-review label, 
+    .survey-review h4.label {
+      text-transform: uppercase; 
+      letter-spacing: 1px; 
+      color: #999; 
+      font-size: 0.9em;
+    }
+    .control h3 {
+      font-size: 3em;
+      cursor: pointer;
+      padding: 0 0 5px;
+      margin: 0;
+      color: #FF3932; 
+    }
+    
+    .control ul.codes {
+      list-style: none; 
+      margin: 0; 
+      padding: 0;
+      border-top: 1px solid #E3E3E3; 
+      border-bottom: 1px solid #EEE;
+      background: #E3E3E3;
+      position: absolute; 
+      top: 100%; 
+      left: 0; 
+      z-index: 99; 
+    }
+      .survey_filters .codes a, 
+      .control .codes li {
+        display: block; 
+        float: left; 
+        width: 25px; 
+        padding: 0.5em 5px;
+        margin: 0; 
+        text-align: center;
+        background: #F3F3F3; 
+        border-width: 0 1px 1px 0; 
+        border-style: solid; 
+        border-color: #FFF; 
+        color: #5793F5;
+        font-weight: bold; 
+        cursor: pointer;
+      }
+        .control .codes li p.desc {
+          display: none;
+        }
+      .survey_filters .codes a:hover, 
+      .control .codes li:hover {
+        background: #FFF; 
+        color: #FF3932; 
+      }
+      .control .codes li.selected {
+        background: #FFF; 
+        color: #999; 
+      }
+      .control .codes li.guess-0 {
+        background: yellow; 
+        color: #333; 
+      }
+      .control .codes li.guess-1 {
+        background: yellow; 
+        color: #666; 
+      }
+      .control .codes li.guess-2 {
+        background: yellow; 
+        color: #999
+        ; 
+      }
+      .control .codes li.short-codes {
+        clear: both; 
+        float: none;
+        width: 170px; 
+        height: 6em;
+        padding: 0.5em 5px; 
+        margin: 0 0 1px; 
+        border-width: 1px 1px 0px 1px; 
+        border-style: solid; 
+        border-color: #E3E3E3 #E3E3E3 #EEE #EEE;
+        background: #FFF;
+        text-align: left;
+        line-height: 1.4em; 
+        font-size: 0.9em;
+        font-weight: normal; 
+        color: #444; 
+      }
+    
+    .control.submit h3 {
+      padding: 10px 0;
+      margin: 0; 
+      line-height: 160px; 
+      text-transform: uppercase; 
+      border: 1px solid #FFF;
+      border-bottom-left-radius: 8px; 
+      -moz-border-radius-bottomleft: 8px;
+      -webkit-border-bottom-left-radius: 8px;
+      color: #CCC; 
+      background: #FFF; 
+      cursor: default; 
+    }
+      .control.submit h3.active.accept {
+        color: #7CEB64;
+        cursor: pointer;
+      }
+      .control.submit h3.active.accept:hover {
+        background: #DCFFB4;
+        color: #4CBB34;
+      }
+
+      .control.submit h3.active.revise {
+        color: #FFC933;
+        cursor: pointer;
+      }
+      .control.submit h3.active.revise:hover {
+        background: #fff633;
+        color: #FF6933;
+      }
+
+    .survey-submit {
+    }
+    
+    .survey-submit textarea {
+      height: 54px; 
+      font-size: 16px; 
+      line-height: 18px; 
+      font-family: "Helvetica Neue", Helvetica, "Bitstream Vera Sans", Arial, sans-serif;            
+      width: 100%;
+      padding: 0.25em 0; 
+      margin: 0 0 1em;
+      border-width: 1px;
+      border-style: solid;
+      border-color: #DDDDDD #D3D3D3 #D3D3D3 #DDDDDD;
+      background: #FFFFFF;       
+    }
+    
+      .assignment {
+        margin-bottom: 0.5em; 
+        border-bottom: 1px solid #E3E3E3;
+        padding-bottom: 0.5em;
+      }
+        .assignment label {
+          color: #333333; 
+          padding-right: 0.5em; 
+        }
+        .assignment select {
+        }
+    

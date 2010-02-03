@@ -1,0 +1,55 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+       "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+  <link href="" rel='shortcut icon' type='image/x-icon' />
+  <title>Tootils:<%= yield :title %></title>
+  <%= stylesheet_link_tag "application" %>
+  <%= javascript_include_tag :defaults %>
+  <%= yield :javascript %>
+  <%= yield :head %>
+</head>
+<body>
+  <div id="header">
+    <div id="header-inner">
+      <%= yield :logbox %>
+      <%= yield :subheader %>
+    </div>
+  </div>
+  
+  <div id="wrapper">
+    <div id="sidebar">
+      <div class="block menu">
+        <%= yield :menu %>
+      </div>
+    </div>
+    <div id="content">
+      <div id="outputcontainer">
+        <div class="output">
+          <% if !flash.empty? %>
+            <div id="flashcontainer">
+              <% if !flash[:notice].blank? %>
+              <p class="flashnotice">
+                <%= flash[:notice] %>
+              </p>
+              <% end %>
+              <% if !flash[:error].blank? %>
+              <p class="flasherror">
+                <%= flash[:error] %>
+              </p>
+              <% end %>
+            </div>
+          <% end %>
+          <%= yield(:content) or yield %>
+        </div>
+      </div>
+    </div>  
+    <div class="clear"></div>
+  </div>
+  
+  <div id="footer">
+    Copyright &copy; <%=h Time.now.to_s(:year) %> de Cielo Creative Collective 
+  </div>
+</body>
+</html>

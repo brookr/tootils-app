@@ -1,0 +1,9 @@
+staging:
+  aws_access_key: AKIAIX2QFZ32SRPKCLKQ
+  aws_secret_access_key: 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
+  bucket_base_name: brookr-rails
+ 
+production:
+  aws_access_key: AKIAIX2QFZ32SRPKCLKQ
+  aws_secret_access_key: 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
+  bucket_base_name: brookr-rails

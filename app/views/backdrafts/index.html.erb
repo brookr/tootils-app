@@ -1,0 +1,5 @@
+<ul>
+<% for post in Post.ordered.reverse %>
+  <li><%=h post.name %> &mdash; <%= post.created_at.to_s(:small) %></li>
+<% end %>
+</ul>

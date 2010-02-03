@@ -22,4 +22,19 @@ class Stream < ActiveRecord::Base
     client.friends.map(&:screen_name)
   end
   
+  def followers(user = nil)
+    if user.nil?
+      client.followers
+    else
+      client.followers(:user => user.name)
+    end
+  end
+
+  def follower_ids(user = nil)
+    if user.nil?
+      client.follower_ids
+    else
+      client.follower_ids(:user => user.name)
+    end
+  end
 end
