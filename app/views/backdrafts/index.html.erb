@@ -1,5 +1,19 @@
-<ul>
-<% for post in Post.ordered.reverse %>
-  <li><%=h post.name %> &mdash; <%= post.created_at.to_s(:small) %></li>
+<% content_for :menu do %>
+  <ul>
+    <li><%= link_to "About", url_for(:controller => "welcome", :action => "index") %></li>
+  </ul>
 <% end %>
+
+<ul class="comments">
+  <% previous_date = '' %>
+  <% for post in Post.ordered.reverse %>
+    <li>
+      <%= "<div class='stamp'>#{post.created_at.to_s(:gruber)}</div>" if post.created_at.to_s(:gruber) != previous_date %>
+      <% previous_date = post.created_at.to_s(:gruber) %>
+      <p class="<% cycle('even', 'odd') %>">
+        <%=h post.name %> &mdash; 
+        <%= link_to "#{post.comments.length} Comments", url_for(:action => "post", :id => post.status_id)  %>
+      </p>
+    </li>
+  <% end %>
 </ul>

@@ -1,7 +1,12 @@
 class Backdraft < Stream
 
   def new_comments
-    results = Twitter::Search.new.to('daringfireball').from('brookr').fetch().results
+    results = Twitter::Search.new.
+      to('daringfireball').
+      per_page(100).
+      since(Comment.last.blank? ? 0 : Comment.ordered.last.status_id).
+      fetch().
+      results
     results.map{ |toot| client.status(toot.id) }.reject{ |toot| toot['in_reply_to_status_id'].blank? }
   end
   

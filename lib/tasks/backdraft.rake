@@ -34,7 +34,7 @@ namespace :backdraft do
           :name => comment['user']['screen_name'],
           :text => comment['text'].gsub(/^@daringfireball */, ''),
           :created_at => comment['created_at']
-        )
+        ) unless comment['text'].gsub(/^@daringfireball */, '').blank?
         # Mark it as saved, by advancing our tweet-check counter. This ensures
         # that this status won't be pulled again.
         backdraft.last_comment = comment['id']

@@ -4,6 +4,7 @@ ActiveSupport::CoreExtensions::Time::Conversions::DATE_FORMATS.merge!(
   :date_time12 => "%m-%d-%Y %I:%M%p",
   :date_time24 => "%m-%d-%Y %H:%M",
   :small => "%b %e, %l:%M %p",
+  :gruber => lambda { |time| Date::DAYNAMES[time.strftime("%w").to_i] + time.strftime(", %e %b %Y") },
   :two_line => "<span>%b %e</span><br /><span>%l:%M %p</span>",
   :db => "%Y-%m-%d %H:%M:%S",
   :ymd => "%Y-%m-%d",

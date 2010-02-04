@@ -5,8 +5,8 @@ class BackdraftsController < ApplicationController
     @posts = Post.ordered
   end
   
-  # Get to /backdrafts/posts/1
-  def posts
+  # Get to /backdrafts/post/1
+  def post
     @post = Post.find_by_status_id(params[:id])
   end
 

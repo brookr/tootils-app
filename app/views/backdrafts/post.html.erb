@@ -1,0 +1,17 @@
+<% content_for :menu do %>
+  <ul>
+    <li><%= link_to "Index", url_for(:action => "index") %></li>
+  </ul>
+<% end %>
+
+<h3><%= link_to "#{@post.name}", "http://#{@post.link}" %></h3>
+<ul class="comments">
+  <% for comment in @post.comments %>
+    <li class="comment">
+      <div class="name"><%= "#{comment.name} says," %></div>
+      <p class="text"> 
+        <%=h comment.text %>
+      </p>
+    </li>
+  <% end %>
+</ul>
