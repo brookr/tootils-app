@@ -24,7 +24,7 @@ ActiveRecord::Schema.define(:version => 20090817071020) do
   create_table "comments", :force => true do |t|
     t.integer   "post_id", :limit => 8
     t.integer   "status_id", :limit => 8
-    t.string    "name", :limit => 8
+    t.string    "name"
     t.string    "text"
     t.datetime  "created_at"
     t.datetime  "updated_at"

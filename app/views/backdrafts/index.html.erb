@@ -11,8 +11,12 @@
       <%= "<div class='stamp'>#{post.created_at.to_s(:gruber)}</div>" if post.created_at.to_s(:gruber) != previous_date %>
       <% previous_date = post.created_at.to_s(:gruber) %>
       <p class="<% cycle('even', 'odd') %>">
-        <%= link_to post.link, post.link %> &mdash; <%=h post.name %> &mdash; 
-        <%= link_to "#{post.comments.length} Comments", url_for(:action => "post", :id => post.status_id)  %>
+        <%= link_to post.link, "http://" + post.link.to_s %> &mdash; <%=h post.name %> &mdash; 
+        <% if post.comments.length > 0 %>
+          <%= link_to "#{post.comments.length} Comments", url_for(:action => "post", :id => post.status_id)  %>
+        <% else %>
+          No Comments yet
+        <% end %>
       </p>
     </li>
   <% end %>
