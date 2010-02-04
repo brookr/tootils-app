@@ -1,4 +1,4 @@
-namespace :backdraft do
+namespace :backdrafts do
   #
   # Run a test job to make sure data reading is working.
   #
