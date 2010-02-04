@@ -12,10 +12,7 @@ Rails::Initializer.run do |config|
     :source => "http://gems.github.com"
   config.gem 'twitter',
     :lib => 'twitter'
-  config.gem 'brookr-tootils',
-    :lib => 'tootils',
-    :version => '0.1.1'
-  
+
   config.time_zone = 'UTC'
 end
 
