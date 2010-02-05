@@ -2,7 +2,7 @@ class BackdraftsController < ApplicationController
   
   # GET /backdrafts/
   def index
-    @posts = Post.ordered
+    @posts = Post.ordered.maximum(params[:max_status_id]).limit(40).find(:all, :include => :comments)
   end
   
   # GET /backdrafts/post/1
