@@ -16,7 +16,7 @@ namespace :backdrafts do
       args.with_defaults(:old => false)
       for post in (Backdraft.first || Backdraft.create).send (args.old ? "old_posts" : "new_posts")
         text = post['text'].split('http://')
-        puts "Logging #{args.old ? 'old' : 'new'} post: #{text[1]}. Exists? " + Post.find_by_status_id(post['id']).blank?.to_s
+        puts "Logging #{args.old ? 'old' : 'new'} post: #{text[1]}. Saving now? " + Post.find_by_status_id(post['id']).blank?.to_s
         Post.create!( 
           :status_id => post['id'],
           :name => text[0].gsub(/: *$/,''),
@@ -50,7 +50,7 @@ namespace :backdrafts do
           backdraft.save
           puts "Logged comment from #{comment['user']['screen_name']} of #{comment['text']}."
         end
-      end
+      end unless results.blank?
     end
   end
 end
