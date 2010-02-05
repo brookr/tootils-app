@@ -10,7 +10,11 @@
     <li class="comment">
       <div class="name"><%= "#{comment.name} says," %></div>
       <p class="text"> 
-        <%=h comment.text %>
+        <%=h comment.text %> 
+        <% if @admin %>
+          <br />
+          <%= link_to 'Destroy', { :controller => 'backdrafts', :id => comment.id }, :confirm => 'Are you sure?', :method => :delete %>
+        <% end %>
       </p>
     </li>
   <% end %>

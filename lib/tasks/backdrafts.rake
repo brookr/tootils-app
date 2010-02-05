@@ -19,7 +19,7 @@ namespace :backdrafts do
         puts "Logging #{args.old ? 'old' : 'new'} post: #{text[1]}. Exists? " + Post.find_by_status_id(post['id']).blank?.to_s
         Post.create!( 
           :status_id => post['id'],
-          :name => text[0],
+          :name => text[0].gsub(/: *$/,''),
           :link => (text[1] && text[1].match(/df.ws/) ? text[1] : nil),
           :created_at => post['created_at']
         ) if Post.find_by_status_id(post['id']).blank?

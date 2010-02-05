@@ -7,7 +7,7 @@ class Backdraft < Stream
       since(Comment.last.blank? ? 0 : Comment.ordered.last.status_id).
       fetch().
       results
-    results.map{ |toot| client.status(toot.id) }.reject{ |toot| toot['in_reply_to_status_id'].blank? }
+    results.map{ |toot| client.status(toot.id) }.reject{ |toot| toot['in_reply_to_status_id'].blank? } unless results.blank?
   end
 
   def old_comments(page)

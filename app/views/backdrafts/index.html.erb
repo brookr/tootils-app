@@ -6,17 +6,30 @@
 
 <ul class="comments">
   <% previous_date = '' %>
-  <% for post in Post.ordered.reverse %>
+  <% for post in Post.ordered.limit(20) %>
     <li>
       <%= "<div class='stamp'>#{post.created_at.to_s(:gruber)}</div>" if post.created_at.to_s(:gruber) != previous_date %>
       <% previous_date = post.created_at.to_s(:gruber) %>
       <p class="<% cycle('even', 'odd') %>">
-        <%= link_to post.link, "http://" + post.link.to_s %> &mdash; <%=h post.name %> &mdash; 
-        <% if post.comments.length > 0 %>
-          <%= link_to "#{post.comments.length} Comments", url_for(:action => "post", :id => post.status_id)  %>
-        <% else %>
-          No Comments yet
-        <% end %>
+        <%= link_to post.link, "http://" + post.link.to_s %> &mdash; <strong><%=h post.name %></strong>
+        <span style="font-size: 10px; color: #999;">
+          <% if post.comments.length > 0 %>
+            (<%= link_to "#{post.comments.length}", url_for(:action => "post", :id => post.status_id)  %> Comments)
+          <% else %>
+            No Comments yet
+          <% end %>
+        </span>
+        <% for comment in post.comments %>
+          <span class="comment">
+            <br />
+            <br />
+            <span class="name" style="font-size: 12px; color: #999;" title="<%= comment.created_at.to_s(:gruber) %>"><%= "#{comment.name} says," %></span>
+            <br />
+            <span class="text"> 
+              <%=h comment.text %>
+            </span>
+          </span>
+        <% end unless post.comments.blank? %>
       </p>
     </li>
   <% end %>
