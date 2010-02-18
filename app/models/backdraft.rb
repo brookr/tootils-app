@@ -4,7 +4,7 @@ class Backdraft < Stream
     r = Twitter::Search.new.
       to('daringfireball').
       per_page(100).
-      since(Comment.last.blank? ? 0 : Comment.ordered.last.status_id).
+      #since(Comment.last.blank? ? 0 : Comment.ordered.last.status_id).
       fetch().
       results
     return r.map{ |toot| client.status(toot.id) }.reject{ |toot| toot['in_reply_to_status_id'].blank? } unless r.blank?
