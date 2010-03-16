@@ -1,26 +1,32 @@
 <h1>Hi.</h1>
 
 <p>
-  Welcome to our playgound.
+  <em>Welcome to our playgound.</em>
 </p>
-
+<h2>Hovermesh</h2>
 <p>
-  Our first project is <%= link_to "Backdrafts", url_for(:controller => "backdrafts") %>, 
-  a comment-gathering system for the excellent <a href="http://daringfireball.net">DaringFireball</a> Weblog.
-  We are in no way affiliated or endorsed by DaringFireball or John Gruber. As an act of appreciation for
-  his work, we offer this simple service.
-</p>
-<p>
-  Hovermesh: What happens when your social graph meshes with someone else's?
+  What happens when your social graph meshes with someone else's?
   Try out our bookmarklet to see! Drag the link below to your bookmark bar, 
-  go to <a href="twitter.com">twitter.com</a>, click the bookmarklet in your 
+  go to <a href="http://twitter.com">twitter.com</a>, click the bookmarklet in your 
   bookmark bar, and then point your mouse to a username. You will see some bonus 
   info loaded into those nifty Hovercards. How many common friends and followers
   do you and they have? How many followbacks to they have? Are any of their 
   followbacks also your followbacks?
 </p>
+<h4>Get it</h4>
 <p>
   Drag to your bookmark bar now: <a href="javascript:(function(){_my_script=document.createElement('SCRIPT');_my_script.type='text/javascript';_my_script.src='http://tootils.com/javascripts/hit.js?';document.getElementsByTagName('head')[0].appendChild(_my_script);})();(function(){_my_script=document.createElement('SCRIPT');_my_script.type='text/javascript';_my_script.src='http://tootils.com/javascripts/hovermesh.js?';document.getElementsByTagName('head')[0].appendChild(_my_script);})();">Hovermesh</a>
+</p>
+<p>
+  We have a PRO version in the works to show even more interesting mesh-effects!
+  Follow <a href="http://twitter.com/decielo">@decielo</a> for info as it develops.
+</p>
+<h2>Backdrafts</h2>
+<p>
+  Introducing <%= link_to "Backdrafts", url_for(:controller => "backdrafts") %>, 
+  a comment-gathering system for the excellent <a href="http://daringfireball.net">DaringFireball</a> Weblog.
+  We are in no way affiliated or endorsed by DaringFireball or John Gruber. As an act of appreciation for
+  his work, we offer this simple service.
 </p>
 <p>
   Some other ideas for interesting tools and utilities are in the works, and will 
