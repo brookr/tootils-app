@@ -1,0 +1,17 @@
+<p>
+  <b>Name:</b>
+  <%=h @tweak.name %>
+</p>
+
+<p>
+  <b>Author:</b>
+  <%=h @tweak.author.login %>
+</p>
+
+<p>
+  <b>Amount:</b>
+  <%=h @tweak.amount.to_s == '0.0' ? 'free' : @tweak.amount %>
+</p>
+
+
+<%= link_to 'Edit', edit_tweak_path %>

@@ -4,6 +4,17 @@
 </p>
 
 <p>
+  <b>Your Bookmarklet:</b>
+  <%= 
+    link_to 'Tweakify!', 
+    "javascript:(function(){_my_script=document.createElement('SCRIPT');_my_script.type='text/javascript';_my_script.src='http://tootils.local/users/source/1.js?screen_name=#{current_user.login}';document.getElementsByTagName('head')[0].appendChild(_my_script);})();"
+  %>
+  <br />
+  <em>Drag to your Bookmark Bar, 
+    go to <%= link_to 'twitter.com', 'http://twitter.com' %>, click it to activate your selected tweaks!</em>
+</p>
+
+<p>
   <b>Login count:</b>
   <%=h @user.login_count %>
 </p>

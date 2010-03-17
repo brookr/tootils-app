@@ -1,0 +1,10 @@
+<%= form.label :name %><br />
+<%= form.text_field :name %><br />
+<br />
+<%= form.label :amount %><br />
+<%= form.text_field :amount %><br />
+<br />
+<%= form.label :source %><br />
+<%= form.text_area :source %><br />
+<br />
+<%= form.hidden_field :author_id, :value => current_user.id %>

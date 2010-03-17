@@ -1,0 +1,7 @@
+<h1>Submit a Tweak</h1>
+
+<% form_for @tweak do |f| %>
+  <%= f.error_messages %>
+  <%= render :partial => "form", :object => f %>
+  <%= f.submit "Submit for Review" %>
+<% end %>

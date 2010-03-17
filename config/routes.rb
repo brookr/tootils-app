@@ -1,9 +1,10 @@
 ActionController::Routing::Routes.draw do |map|
+  map.resources :tweaks
   map.resources :punctualize
   map.resources :scores
-  map.resources :users
+  map.resources :users, :has_many => 'tweaks'
   map.resource :user_session
-  map.resource :account, :controller => "users"
+  map.resource :account, :controller => 'users'
   
   # The priority is based upon order of creation: first created -> highest priority.
 
@@ -38,7 +39,8 @@ ActionController::Routing::Routes.draw do |map|
 
   # You can have the root of your site routed with map.root -- just remember to delete public/index.html.
   map.root :controller => "welcome"
-
+  map.signin 'signin/', :controller => "user_sessions", :action => "new"
+  map.signup 'signup/', :controller => "users", :action => "new"
   # See how all your routes lay out with "rake routes"
 
   # Install the default routes as the lowest priority.

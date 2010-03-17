@@ -1,0 +1,18 @@
+<h1>All Tweaks</h1>
+
+<table id="tweaks">
+  <tr>
+    <th>Name</th>
+    <th>Author</th>
+    <th>Amount</th>
+    <th></th>
+  </tr>
+  <% @tweaks.each do |tweak| %>
+    <tr>
+      <td><%=h tweak.name %></td>
+      <td><%=h tweak.author.login %></td>
+      <td><%=h tweak.amount %></td>
+      <td><%= link_to('Edit', edit_tweak_path(tweak)) if tweak.author == current_user %></td>
+    </tr>
+  <% end %>
+</table>
