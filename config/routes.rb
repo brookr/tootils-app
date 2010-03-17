@@ -2,7 +2,9 @@ ActionController::Routing::Routes.draw do |map|
   map.resources :punctualize
   map.resources :scores
   map.resources :users
-
+  map.resource :user_session
+  map.resource :account, :controller => "users"
+  
   # The priority is based upon order of creation: first created -> highest priority.
 
   # Sample of regular route:

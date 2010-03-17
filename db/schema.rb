@@ -56,9 +56,24 @@ ActiveRecord::Schema.define(:version => 20090817071020) do
   end
 
   create_table "users", :force => true do |t|
-    t.string   "name"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.string    "name"
+    t.string    "login",               :null => false
+    t.string    "email",               :null => false
+    t.string    "crypted_password",    :null => false
+    t.string    "password_salt",       :null => false
+    t.string    "persistence_token",   :null => false
+    t.string    "single_access_token", :null => false
+    t.string    "perishable_token",    :null => false
+    t.datetime  "created_at"
+    t.datetime  "updated_at"
+    # These are automatically maintained by Authlogic if they are present.
+    t.integer   "login_count",         :null => false, :default => 0
+    t.integer   "failed_login_count",  :null => false, :default => 0
+    t.datetime  "last_request_at" 
+    t.datetime  "current_login_at"
+    t.datetime  "last_login_at"   
+    t.string    "current_login_ip"
+    t.string    "last_login_ip"   
   end
   
   create_table "twits", :force => true do |t|
