@@ -3,7 +3,7 @@
 <% end %>
 
 <% content_for :subheader do %>
-  <h1>Tootils &middot; Welcome<%= ", #{current_user.login}" %></h1>
+  <h1>Tootils &middot; Welcome<%= ", #{current_user.login}" unless current_user.blank? %></h1>
 <% end %>
 
 <% content_for :menu do %>
