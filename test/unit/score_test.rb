@@ -6,3 +6,17 @@ class ScoreTest < ActiveSupport::TestCase
   end
        
 end
+
+# == Schema Information
+#
+# Table name: scores
+#
+#  id         :integer(4)      not null, primary key
+#  user_id    :integer(4)
+#  points     :integer(4)
+#  source     :string(255)
+#  text       :string(255)
+#  created_at :datetime
+#  updated_at :datetime
+#
+

@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100317071916) do
+ActiveRecord::Schema.define(:version => 20100322091452) do
 
   create_table "command", :force => true do |t|
     t.string   "type"
@@ -59,17 +59,23 @@ ActiveRecord::Schema.define(:version => 20100317071916) do
   end
 
   create_table "tweaks", :force => true do |t|
-    t.string  "name"
-    t.text    "source"
-    t.decimal "amount",     :precision => 6, :scale => 2, :default => 0.0
-    t.integer "author_id" 
-    t.boolean "approved"
-    t.timestamps
+    t.string    "name"
+    t.text      "source"
+    t.text      "description"
+    t.text      "link"
+    t.decimal   "amount",     :precision => 6, :scale => 2, :default => 0.0
+    t.integer   "author_id" 
+    t.boolean   "approved"
+    t.datetime  "created_at"
+    t.datetime  "updated_at"
   end
   
-  create_table "tweaks_users", :force => true do |t|
-    t.integer "tweak_id"
-    t.integer "user_id"
+  create_table "tweak_settings", :force => true do |t|
+    t.integer  "tweak_id"
+    t.integer  "user_id"
+    t.integer  "config"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
   
   create_table "users", :force => true do |t|

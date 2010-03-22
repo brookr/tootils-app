@@ -2,7 +2,13 @@
 
 <% form_for @user, :url => account_path do |f| %>
   <%= f.error_messages %>
-  <%= render :partial => "form", :object => f %>
+  Select your Tweaks<br />
+  <% for tweak in Tweak.all %>
+    <div>
+      <%= check_box_tag "user[tweak_ids][]", tweak.id, @user.tweaks.include?(tweak) %>
+      <%= tweak.name %>
+    </div>
+  <% end %>  <br />
   <%= f.submit "Update" %>
 <% end %>
 
