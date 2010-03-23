@@ -1,4 +1,5 @@
 class TweaksController < ApplicationController
+  before_filter :require_user, :only => [:new, :create, :edit, :update]
 
   # GET /tweaks
   # GET /tweaks.xml

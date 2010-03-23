@@ -9,9 +9,15 @@
 </p>
 
 <p>
+  <b>Description:</b>
+  <%=h @tweak.description %>
+</p>
+
+<p>
   <b>Amount:</b>
   <%=h @tweak.amount.to_s == '0.0' ? 'free' : @tweak.amount %>
 </p>
 
 
-<%= link_to 'Edit', edit_tweak_path %>
+<%= link_to 'Edit', edit_tweak_path %> |
+<%= link_to 'List', tweaks_path %>

@@ -24,16 +24,19 @@ class ApplicationController < ActionController::Base
     def require_user
         unless current_user
           store_location
-          flash[:notice] = "You must be logged in to access this page"
-          redirect_to login_path
+          flash[:notice] = "You must be logged in to access this page (#{request.url})"
+          redirect_to signin_path
           return false
         end
       end
 
     def require_no_user
       if current_user
-        store_location
-        flash[:notice] = "You must be logged out to access this page"
+        if ['http://tootils.local/signin', 'http://tootils.local/user_session/new'].include? request.url
+          redirect_to account_url
+          return true
+        end
+        flash[:notice] = "You must be logged out to access this page (#{request.url})"
         redirect_to root_url
         return false
       end

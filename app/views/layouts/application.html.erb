@@ -21,6 +21,11 @@
   <div id="wrapper">
     <div id="sidebar">
       <div class="block menu">
+        <ul>
+          <li><%= link_to "Account", account_path if current_user %></li>
+          <li><%= link_to "Sign Out", signout_path if current_user %></li>
+          <li><%= link_to "Sign in", signin_path unless current_user %></li>
+        </ul>
         <%= yield :menu %>
       </div>
     </div>

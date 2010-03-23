@@ -4,6 +4,7 @@
   <tr>
     <th>Name</th>
     <th>Author</th>
+    <th>Description</th>
     <th>Amount</th>
     <th></th>
   </tr>
@@ -11,8 +12,12 @@
     <tr>
       <td><%=h tweak.name %></td>
       <td><%=h tweak.author.login %></td>
+      <td><%=h tweak.description %></td>
       <td><%=h tweak.amount %></td>
       <td><%= link_to('Edit', edit_tweak_path(tweak)) if tweak.author == current_user %></td>
     </tr>
   <% end %>
 </table>
+<br />
+<br />
+<%= link_to 'Get Tweaks!', edit_account_path %>

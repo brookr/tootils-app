@@ -1,48 +1,22 @@
-<p>
-  <b>Login:</b>
-  <%=h @user.login %>
-</p>
 
 <p>
-  <b>Your Bookmarklet:</b>
+  <h2>Your Bookmarklet</h2>
+  Drag to your Bookmark Bar:
   <%= 
     link_to 'Tweakify!', 
     "javascript:(function(){_my_script=document.createElement('SCRIPT');_my_script.type='text/javascript';_my_script.src='http://tootils.local/users/source/1.js?screen_name=#{current_user.login}';document.getElementsByTagName('head')[0].appendChild(_my_script);})();"
   %>
   <br />
-  <em>Drag to your Bookmark Bar, 
-    go to <%= link_to 'twitter.com', 'http://twitter.com' %>, click it to activate your selected tweaks!</em>
+  <em>
+    Then go to <%= link_to 'twitter.com', 'http://twitter.com' %> &amp; click it to activate your selected tweaks!</em>
 </p>
 
 <p>
-  <b>Login count:</b>
-  <%=h @user.login_count %>
-</p>
-
-<p>
-  <b>Last request at:</b>
-  <%=h @user.last_request_at %>
-</p>
-
-<p>
-  <b>Last login at:</b>
-  <%=h @user.last_login_at %>
-</p>
-
-<p>
-  <b>Current login at:</b>
-  <%=h @user.current_login_at %>
-</p>
-
-<p>
-  <b>Last login ip:</b>
-  <%=h @user.last_login_ip %>
-</p>
-
-<p>
-  <b>Current login ip:</b>
-  <%=h @user.current_login_ip %>
+  <h2>Your Bundled Tweaks</h2>
+  <% for tweak in @user.tweaks %>
+    &#8212; <%=h tweak.name %> <br />
+  <% end %>
 </p>
 
 
-<%= link_to 'Edit', edit_account_path %>
+<%= link_to 'Get Tweaks!', edit_account_path %>

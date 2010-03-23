@@ -8,6 +8,7 @@
 
 <% content_for :menu do %>
   <ul>
+    <li><%= link_to "Tweakify!", url_for(:controller => "tweaks", :action => "index") %></li>
     <li><%= link_to "Backdrafts", url_for(:controller => "backdrafts", :action => "index") %></li>
   </ul>
 <% end %>
